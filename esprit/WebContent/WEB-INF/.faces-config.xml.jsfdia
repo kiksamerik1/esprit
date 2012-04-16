@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="48,232,53,58" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="employees.edit::#employees#edit.jsp"
+    NAME="output" PATH="/employees/edit.jsp"
+    TARGET="rules:#employees#edit.jsp" TITLE="employees.edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="employees.show::#employees#show.jsp"
+    NAME="output1" PATH="/employees/show.jsp"
+    TARGET="rules:#employees#show.jsp" TITLE="employees.show" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="employees.list::#employees#list.jsp"
+    NAME="output2" PATH="/employees/list.jsp"
+    SHAPE="100,296,232,296,232,112,327,112"
+    TARGET="rules:#employees#list.jsp" TITLE="employees.list" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="employees.new::#employees#new.jsp"
+    NAME="output3" PATH="/employees/new.jsp"
+    SHAPE="100,312,256,312,256,144,399,144"
+    TARGET="rules:#employees#new.jsp" TITLE="employees.new" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#employees#new.jsp" PATH="/employees/new.jsp"
+  SHAPE="400,136,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#employees#list.jsp"
+  PATH="/employees/list.jsp" SHAPE="328,104,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#employees#edit.jsp"
+  PATH="/employees/edit.jsp" SHAPE="192,40,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#employees#show.jsp"
+  PATH="/employees/show.jsp" SHAPE="264,72,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:*:1" PATH="*" SHAPE="232,488,53,26" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:1" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="projects.edit::#projects#edit.jsp"
+    NAME="output3" PATH="/projects/edit.jsp"
+    TARGET="rules:#projects#edit.jsp" TITLE="projects.edit" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="projects.show::#projects#show.jsp"
+    NAME="output2" PATH="/projects/show.jsp"
+    TARGET="rules:#projects#show.jsp" TITLE="projects.show" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="projects.list::#projects#list.jsp"
+    NAME="output1" PATH="/projects/list.jsp"
+    SHAPE="284,552,424,552,424,344,511,344"
+    TARGET="rules:#projects#list.jsp" TITLE="projects.list" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="projects.new::#projects#new.jsp"
+    NAME="output" PATH="/projects/new.jsp"
+    SHAPE="284,568,448,568,448,392,551,392"
+    TARGET="rules:#projects#new.jsp" TITLE="projects.new" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#projects#edit.jsp" PATH="/projects/edit.jsp"
+  SHAPE="384,256,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#projects#show.jsp" PATH="/projects/show.jsp"
+  SHAPE="451,300,0,0" model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#projects#list.jsp" PATH="/projects/list.jsp"
+  SHAPE="512,336,50,25" model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#projects#new.jsp" PATH="/projects/new.jsp"
+  SHAPE="555,386,0,0" model-entity="JSFProcessGroup" persistent="true"/>
+</PROCESS>

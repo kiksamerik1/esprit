@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xi="http://www.w3.org/2001/XInclude"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+ <managed-bean>
+  <managed-bean-name>epctr</managed-bean-name>
+  <managed-bean-class>edu.app.jsf.control.EmployeeProjectCtr</managed-bean-class>
+  <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+ <navigation-rule>
+  <from-view-id>*</from-view-id>
+  <navigation-case>
+   <from-outcome>employees.edit</from-outcome>
+   <to-view-id>/employees/edit.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>employees.show</from-outcome>
+   <to-view-id>/employees/show.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>employees.list</from-outcome>
+   <to-view-id>/employees/list.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>employees.new</from-outcome>
+   <to-view-id>/employees/new.jsp</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+ <navigation-rule>
+  <from-view-id>*</from-view-id>
+  <navigation-case>
+   <from-outcome>projects.edit</from-outcome>
+   <to-view-id>/projects/edit.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>projects.show</from-outcome>
+   <to-view-id>/projects/show.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>projects.list</from-outcome>
+   <to-view-id>/projects/list.jsp</to-view-id>
+  </navigation-case>
+  <navigation-case>
+   <from-outcome>projects.new</from-outcome>
+   <to-view-id>/projects/new.jsp</to-view-id>
+  </navigation-case>
+ </navigation-rule>
+</faces-config>

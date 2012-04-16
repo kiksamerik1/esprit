@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+	<persistence-unit name="espritPU">
+		<jta-data-source>java:/espritDS</jta-data-source>
+		<class>edu.app.ejb.entity.Project</class>
+		<class>edu.app.ejb.entity.Employee</class>
+		<class>edu.app.ejb.entity.Assignment</class>
+		<class>edu.app.ejb.entity.Assignment$Id</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+		</properties>
+	</persistence-unit>
+</persistence>
