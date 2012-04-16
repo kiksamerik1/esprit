@@ -30,14 +30,15 @@ public class Assignment implements Serializable{
 		
 		private Integer employeeId;
 		private Integer projectId;
-		
+		private String role;
 		
 		public Id() {
 		}
 
-		public Id(Integer employeeId, Integer projectId) {
+		public Id(Integer employeeId, Integer projectId, String role) {
 			this.employeeId = employeeId;
 			this.projectId = projectId;
+			this.role = role;
 		}
 		
 		@Column( name = "employee_fk" )
@@ -58,6 +59,15 @@ public class Assignment implements Serializable{
 			this.projectId = projectId;
 		}
 
+		@Column( name = "role" )
+		public String getRole() {
+			return role;
+		}
+
+		public void setRole(String role) {
+			this.role = role;
+		}
+
 		@Override
 		public int hashCode() {
 			final int prime = 31;
@@ -66,6 +76,7 @@ public class Assignment implements Serializable{
 					+ ((employeeId == null) ? 0 : employeeId.hashCode());
 			result = prime * result
 					+ ((projectId == null) ? 0 : projectId.hashCode());
+			result = prime * result + ((role == null) ? 0 : role.hashCode());
 			return result;
 		}
 
@@ -88,6 +99,11 @@ public class Assignment implements Serializable{
 					return false;
 			} else if (!projectId.equals(other.projectId))
 				return false;
+			if (role == null) {
+				if (other.role != null)
+					return false;
+			} else if (!role.equals(other.role))
+				return false;
 			return true;
 		}
 
@@ -96,7 +112,6 @@ public class Assignment implements Serializable{
 	private Id id;
 	private Employee employee;
 	private Project project;
-	private String role;
 	
 	public Assignment() {
 	}
@@ -104,7 +119,7 @@ public class Assignment implements Serializable{
 	public Assignment(Project project, Employee employee, String role) {
 		this.getId().setEmployeeId(employee.getId());
 		this.getId().setProjectId(project.getId());
-		this.role = role;
+		this.getId().setRole(role); 
 		this.employee = employee;
 		this.project = project;
 	}
@@ -138,15 +153,6 @@ public class Assignment implements Serializable{
 
 	public void setProject(Project project) {
 		this.project = project;
-	}
-	
-	@Column( name = "role" )
-	public String getRole() {
-		return role;
-	}
-
-	public void setRole(String role) {
-		this.role = role;
 	}
 	
 }

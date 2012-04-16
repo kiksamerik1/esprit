@@ -17,9 +17,9 @@ public class Main {
 		EmployeeProjectManagerRemote remote = (EmployeeProjectManagerRemote)ctx.lookup("app/EmployeeProjectManager/remote");
 		Employee e = remote.findEmployeeById(2);
 		System.out.println(e);
-		Project p = remote.findProjectById(1);
+		Project p = remote.findProjectById(2);
 		System.out.println(p);
-		remote.removeEmployeeFromProject(e, p);
+		remote.assignEmployeeToProject(e, p, "hero");
 
 	}
 	public static void main(String[] args) throws NamingException {
